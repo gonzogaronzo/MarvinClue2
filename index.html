@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvin Clue 2 – Morse Message</title>
+    <!--
+      This page delivers a Hitchhiker’s Guide–style scavenger hunt clue.
+      A dark, sci‑fi background sets the mood and a sad Marvin robot
+      anchors the composition.  A single button starts a Morse‑code
+      transmission, both audibly (via a pre‑generated audio file) and
+      visually (via a flashing indicator that syncs to the audio).  The
+      code spells out: “FIND THE PHOTO FROM PIE DAY”.  Pause will halt
+      the message and the blink.
+    -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <img id="marvin" src="assets/Marvin.png" alt="Marvin the Paranoid Android">
+        <button id="play-pause">Play Morse Code</button>
+        <div id="morse-light" aria-label="morse code indicator"></div>
+        <!-- Hidden audio element preloads the generated Morse code sound. -->
+        <audio id="morse-audio" src="assets/morse_audio.wav" preload="auto"></audio>
+        <div id="help-text">Need help decoding?</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
