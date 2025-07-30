@@ -1,0 +1,92 @@
+/*
+  Global styles for the Marvin Clue 2 webpage.  A dark colour palette
+  and neon accents evoke a sci‑fi atmosphere.  The main container
+  stretches to fill the viewport and centres its children.  A small
+  circular indicator blinks with the Morse transmission.
+*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f5f5f5;
+    background-color: #000;
+}
+
+/* The main container uses a background image and centers its
+   contents vertically and horizontally.  A semi‑transparent overlay
+   darkens the image for better contrast with the content. */
+.main-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('assets/background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Marvin image is responsive and never exceeds its natural size. */
+#marvin {
+    width: 45%;
+    max-width: 350px;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+/* Play/pause button styling with subtle hover and focus effects. */
+#play-pause {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #0066cc;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 102, 204, 0.4);
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+#play-pause:hover {
+    background: #0055aa;
+    box-shadow: 0 0 14px rgba(0, 102, 204, 0.6);
+}
+
+#play-pause:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.4);
+}
+
+/* Morse code indicator.  When active, it glows cyan to suggest
+   futuristic circuitry. */
+#morse-light {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #111;
+    margin-top: 20px;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+    transition: background 0.05s ease, box-shadow 0.05s ease;
+}
+
+#morse-light.active {
+    background: #00ffff;
+    box-shadow: 0 0 25px #00ffff;
+}
+
+/* Subtle helper text at the bottom of the page. */
+#help-text {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: underline;
+    cursor: default;
+}
